@@ -1,6 +1,6 @@
 # NgxBlurhashRender
 
-This is a simple lighweight library that renders the blurhash of a provided image.
+This is a simple lighweight library that renders the blurhash of a provided image. For all versions of Angular 2+
 
 **Note**:
 Requires [blurhash](https://www.npmjs.com/package/blurhash) as a dependency
@@ -14,7 +14,7 @@ Requires [blurhash](https://www.npmjs.com/package/blurhash) as a dependency
 ## Example
 Add the Module import to your module file or directly import it if you are using a standalone component.
 
-`import { NgxBlurhashModule } from 'NgxBlurhashModule';`
+`import { NgxBlurhashModule } from 'ngx-blurhash-render';`
 
 In your HTML file simply add the selector as follows:
 
