@@ -1,24 +1,28 @@
 # NgxBlurhashRender
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.0.
+This is a simple lighweight library that renders the blurhash of a provided image.
 
-## Code scaffolding
+**Note**:
+Requires [blurhash](https://www.npmjs.com/package/blurhash) as a dependency
 
-Run `ng generate component component-name --project ngx-blurhash-render` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-blurhash-render`.
-> Note: Don't forget to add `--project ngx-blurhash-render` or else it will be added to the default project in your `angular.json` file. 
+## Features
+* Smooth animation for transition from canvas to image
+* Auto decoding of provided blurhash string and rendering to canvas
+* Customisable for images and containers of all sizes
+* At around a measly 1.6-1.7kb it is blazingly fast and barely affects your bundle size
 
-## Build
+## Example
+Add the Module import to your module file or directly import it if you are using a standalone component.
 
-Run `ng build ngx-blurhash-render` to build the project. The build artifacts will be stored in the `dist/` directory.
+`import { NgxBlurhashModule } from 'NgxBlurhashModule';`
 
-## Publishing
+In your HTML file simply add the selector as follows:
 
-After building your library with `ng build ngx-blurhash-render`, go to the dist folder `cd dist/ngx-blurhash-render` and run `npm publish`.
+`<ngx-blurhash-render [blurHash]="'L8CrZD~S5T^hIWE3IqRR0459^hxF'" [imageSrc]="'https://api.animetography-blog.com/api/media-upload/mediaFiles/test/40fc2d874f1d72e810322d266fabfa445.png'"></ngx-blurhash-render>`
 
-## Running unit tests
+## Options
+| Input      | Value | Description     |
+| :---        |    :----:   |          ---: |
+| [blurHash]      | 'string'       | The blurhash string   |
+| [imageSrc]   | 'string'        | The actual image path or url      |
 
-Run `ng test ngx-blurhash-render` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
