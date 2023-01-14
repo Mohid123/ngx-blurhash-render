@@ -1,0 +1,17 @@
+{
+  "name": "ngx-blurhash-render",
+  "version": "1.0.0",
+  "description": "A simple package to render blurhash for large and/or heavy image files. For all versions of Angular 2+",
+  "author": {"name": "Muhammad Mohid", "email": "muhammadmohid141@gmail.com"},
+  "repository": {"url": "https://github.com/Mohid123/ng-render-blurhash", "type": "git"},
+  "license": "MIT",
+  "keywords": ["Angular", "Image Rendering", "Blurhash", "TypeScript"],
+  "peerDependencies": {
+    "@angular/common": "^15.0.0",
+    "@angular/core": "^15.0.0"
+  },
+  "dependencies": {
+    "blurhash": "^1.1.5",
+    "tslib": "^2.3.0"
+  }
+}
