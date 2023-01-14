@@ -12,7 +12,7 @@ For versions older than Angular 15, run the command `npm i ngx-blurhash-render -
 * Smooth animation for transition from canvas to image 💖
 * Auto decoding of provided blurhash string and rendering to canvas 💪
 * Customisable for images and containers of all sizes 🤖
-* At around a measly 6-7kb it is blazingly fast and barely affects your bundle size 🚀
+* Blazingly fast and easy on your bundle size 🚀
 
 ## Example
 Add the Module import to your module file or directly import it if you are using a standalone component.
