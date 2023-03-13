@@ -1,1 +1,1 @@
-# ng-render-blurhash
+# NgxBlurhashRender
