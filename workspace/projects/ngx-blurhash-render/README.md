@@ -21,14 +21,16 @@ Add the Module import to your module file or directly import it if you are using
 
 In your HTML file simply add the following code snippet:
 
-`<div style="width: 200px; height: 200px;">
+```
+<div style="width: 200px; height: 200px;">
   <ngx-blurhash-render
     [blurHash]="'L38gy-00~qIUIUt7M{RjM{j[t7of'"
     [imageSrc]="'https://api.animetography-blog.com/api/media-upload/mediaFiles/test/31146bc10b344cdb90a13eae66102953f7.jpg'"
     style="width: 100%; height: 100%;"
   >
   </ngx-blurhash-render>
-</div>`
+</div>
+```
 
 ## Options
 | Input      | Value | Description     |
