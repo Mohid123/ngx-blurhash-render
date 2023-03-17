@@ -1,3 +1,4 @@
+import { NgOptimizedImage } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { NgxBlurhashComponent } from './ngx-blurhash.component';
 
@@ -8,6 +9,7 @@ import { NgxBlurhashComponent } from './ngx-blurhash.component';
     NgxBlurhashComponent
   ],
   imports: [
+    NgOptimizedImage
   ],
   exports: [
     NgxBlurhashComponent

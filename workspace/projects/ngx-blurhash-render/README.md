@@ -1,12 +1,12 @@
 # NgxBlurhashRender
 
-This is a simple lighweight library that renders the blurhash of a provided image. For all versions of Angular 2+
+This is a simple lighweight library that renders the blurhash of a provided image. For all versions of Angular 15
 
 **Note**:
 Requires [blurhash](https://www.npmjs.com/package/blurhash) as a dependency
 
 **Warning**
-For versions older than Angular 15, run the command `npm i ngx-blurhash-render --legacy-peer-deps`
+Not available for versions older than Angular 15`
 
 ## Features
 * Smooth animation for transition from canvas to image 💖
@@ -19,9 +19,16 @@ Add the Module import to your module file or directly import it if you are using
 
 `import { NgxBlurhashModule } from 'ngx-blurhash-render';`
 
-In your HTML file simply add the selector as follows:
+In your HTML file simply add the following HTML:
 
-`<ngx-blurhash-render [blurHash]="'L8CrZD~S5T^hIWE3IqRR0459^hxF'" [imageSrc]="'https://api.animetography-blog.com/api/media-upload/mediaFiles/test/40fc2d874f1d72e810322d266fabfa445.png'"></ngx-blurhash-render>`
+`<div style="width: 200px; height: 200px;">
+  <ngx-blurhash-render
+    [blurHash]="'L38gy-00~qIUIUt7M{RjM{j[t7of'"
+    [imageSrc]="'https://api.animetography-blog.com/api/media-upload/mediaFiles/test/31146bc10b344cdb90a13eae66102953f7.jpg'"
+    style="width: 100%; height: 100%;"
+  >
+  </ngx-blurhash-render>
+</div>`
 
 ## Options
 | Input      | Value | Description     |

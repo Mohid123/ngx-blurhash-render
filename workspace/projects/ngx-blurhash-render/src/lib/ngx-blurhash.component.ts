@@ -6,46 +6,55 @@ import { decode } from 'blurhash';
   selector: 'ngx-blurhash-render',
   template: `
     <canvas #canvas [width]="canvasWidth" [height]="canvasHeight"></canvas>
-    <img [attr.loading]="loading" [src]="imageSrc" (load)="imageLoad = true" (onloadeddata)="imageLoaded = true" [class.img-loaded]="imageLoad">
+    <img
+      alt="blurred-image"
+      [ngSrc]="imageSrc"
+      width="100"
+      height="100"
+      (load)="imageLoad = true"
+      (onloadeddata)="imageLoaded = true"
+      [class.img-loaded]="imageLoad"
+    >
   `,
   styles: [
     `
     :host {
       display: block;
+      position: relative;
     }
-
+    
     canvas {
       height: 100%;
       width: 100%;
       position: absolute;
       left: 0;
-      border-radius: 12px;
+      top: 0;
     }
-
+    
     img {
       opacity: 0;
-      width: 100%;
-      height: 100%;
+      width: inherit;
+      height: inherit;
       position: absolute;
       object-fit: cover;
       left: 0;
-      border-radius: 8px;
+      top:0
     }
-
+    
     .img-loaded {
       animation: popIn 0.4s both ease-in;
     }
-
+  
     @keyframes popIn {
       0% {
         opacity: 0;
       }
-
+    
       100% {
         opacity: 1;
       }
     }
-    `
+  `
   ]
 })
 export class NgxBlurhashComponent {
