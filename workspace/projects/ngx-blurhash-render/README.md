@@ -19,7 +19,7 @@ Add the Module import to your module file or directly import it if you are using
 
 `import { NgxBlurhashModule } from 'ngx-blurhash-render';`
 
-In your HTML file simply add the following HTML:
+In your HTML file simply add the following code snippet:
 
 `<div style="width: 200px; height: 200px;">
   <ngx-blurhash-render
