@@ -5,8 +5,8 @@ This is a simple lighweight library that renders the blurhash of a provided imag
 **Note**:
 Requires [blurhash](https://www.npmjs.com/package/blurhash) as a dependency
 
-**Warning**
-Not available for versions older than Angular 15`
+**Warning**:
+Not available for versions older than Angular 15
 
 ## Features
 * Smooth animation for transition from canvas to image 💖
