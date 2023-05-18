@@ -22,14 +22,14 @@ Add the Module import to your module file or directly import it if you are using
 In your HTML file simply add the following code snippet:
 
 ```
-<div style="width: 200px; height: 200px;">
   <ngx-blurhash-render
     [blurHash]="'L38gy-00~qIUIUt7M{RjM{j[t7of'"
     [imageSrc]="'https://api.animetography-blog.com/api/media-upload/mediaFiles/test/31146bc10b344cdb90a13eae66102953f7.jpg'"
-    style="width: 100%; height: 100%;"
+    [width]="'100px'"
+    [height]="'100px'"
+    [borderRadius]="'12px'"
   >
   </ngx-blurhash-render>
-</div>
 ```
 
 ## Options
@@ -37,4 +37,7 @@ In your HTML file simply add the following code snippet:
 | :---        |    :----:   |          ---: |
 | [blurHash]      | 'string'       | The blurhash string   |
 | [imageSrc]   | 'string'        | The actual image path or url      |
+| [width]   | 'string'        | The width of the image      |
+| [height]   | 'string'        | The height of the image      |
+| [borderRadius]   | 'string'        | The border radius of the image      |
 
