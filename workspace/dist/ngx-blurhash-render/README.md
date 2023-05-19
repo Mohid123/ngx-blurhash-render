@@ -8,6 +8,8 @@ Requires [blurhash](https://www.npmjs.com/package/blurhash) as a dependency
 **Warning**:
 Not available for versions older than Angular 15
 
+## [DEMO](https://blurhash-pkg-demo.pages.dev/)
+
 ## Features
 * Smooth animation for transition from canvas to image 💖
 * Auto decoding of provided blurhash string and rendering to canvas 💪
