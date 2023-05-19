@@ -1,6 +1,6 @@
 {
   "name": "ngx-blurhash-render",
-  "version": "15.2.1",
+  "version": "15.2.2",
   "description": "A simple package to render blurhash for large and/or heavy image files. For Angular 15+",
   "author": {
     "name": "Muhammad Mohid",
