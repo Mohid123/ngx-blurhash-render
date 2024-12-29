@@ -17,18 +17,9 @@ Not available for versions older than Angular 15. Currently supports Versions 15
 * Blazingly fast and easy on your bundle size 🚀
 
 ## Example
-Import the package directly as a standalone component.
+Add the Module import to your module file or directly import it if you are using a standalone component.
 
-```import { NgxBlurhashComponent } from 'ngx-blurhash-render';
-
-@Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule, BrowserModule, NgxBlurhashComponent],
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
-})
-```
+`import { NgxBlurhashModule } from 'ngx-blurhash-render';`
 
 In your HTML file simply add the following code snippet:
 
