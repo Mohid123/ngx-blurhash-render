@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgxBlurhashModule } from 'ngx-blurhash-render';
 
 import { AppComponent } from './app.component';
+import { NgxBlurhashComponent } from 'ngx-blurhash-render';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    NgxBlurhashModule,
+    NgxBlurhashComponent,
     BrowserModule
   ],
   providers: [],

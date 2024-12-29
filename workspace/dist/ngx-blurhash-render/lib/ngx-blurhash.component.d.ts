@@ -41,5 +41,5 @@ export declare class NgxBlurhashComponent {
     ngAfterViewInit(): void;
     private decodeBlurHash;
     static ɵfac: i0.ɵɵFactoryDeclaration<NgxBlurhashComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<NgxBlurhashComponent, "ngx-blurhash-render", never, { "blurHash": "blurHash"; "imageSrc": "imageSrc"; "loading": "loading"; "borderRadius": "borderRadius"; "width": "width"; "height": "height"; }, {}, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<NgxBlurhashComponent, "ngx-blurhash-render", never, { "blurHash": { "alias": "blurHash"; "required": false; }; "imageSrc": { "alias": "imageSrc"; "required": false; }; "loading": { "alias": "loading"; "required": false; }; "borderRadius": { "alias": "borderRadius"; "required": false; }; "width": { "alias": "width"; "required": false; }; "height": { "alias": "height"; "required": false; }; }, {}, never, never, true, never>;
 }

@@ -1,4 +1,4 @@
-import { isPlatformBrowser } from '@angular/common';
+import { CommonModule, isPlatformBrowser, NgOptimizedImage } from '@angular/common';
 import { Component, ElementRef, Inject, Input, PLATFORM_ID, ViewChild } from '@angular/core';
 import { decode } from 'blurhash';
 
@@ -7,6 +7,8 @@ import { decode } from 'blurhash';
  */
 @Component({
   selector: 'ngx-blurhash-render',
+  standalone: true,
+  imports: [CommonModule, NgOptimizedImage],
   template: `
     <canvas
       #canvas
