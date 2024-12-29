@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "blurhash": "^1.1.5",
-    "tslib": "^2.3.0"
+    "tslib": "^2.5.0"
   },
   "module": "fesm2022/ngx-blurhash-render.mjs",
   "typings": "index.d.ts",

@@ -12,6 +12,12 @@
   },
   "dependencies": {
     "blurhash": "^1.1.5",
-    "tslib": "^2.3.0"
+    "tslib": "^2.5.0"
+  },
+  "devDependencies": {
+    "@angular/compiler": "^17.0.0",
+    "@angular/compiler-cli": "^17.0.0",
+    "ng-packagr": "^17.0.0",
+    "typescript": "^5.2.0"
   }
 }
