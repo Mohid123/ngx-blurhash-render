@@ -19,7 +19,8 @@ Not available for versions older than Angular 15. Currently supports Versions 15
 ## Example
 Import the package directly as a standalone component.
 
-```import { NgxBlurhashComponent } from 'ngx-blurhash-render';
+```
+import { NgxBlurhashComponent } from 'ngx-blurhash-render';
 
 @Component({
   selector: 'app-root',
