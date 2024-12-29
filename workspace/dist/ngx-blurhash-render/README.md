@@ -1,12 +1,12 @@
 # NgxBlurhashRender
 
-This is a simple lighweight library that renders the blurhash of a provided image. For Angular 15+
+This is a simple lighweight library that renders the blurhash of a provided image. For Angular 15+.
 
 **Note**:
-Requires [blurhash](https://www.npmjs.com/package/blurhash) as a dependency
+Requires [blurhash](https://www.npmjs.com/package/blurhash) as a dependency.
 
 **Warning**:
-Not available for versions older than Angular 15
+Not available for versions older than Angular 15. Currently supports Versions 15-18.
 
 ## [DEMO](https://blurhash-pkg-demo.pages.dev/)
 

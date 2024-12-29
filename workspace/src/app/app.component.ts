@@ -1,9 +1,14 @@
 import { Component } from '@angular/core';
+import { NgxBlurhashComponent } from '../../dist/ngx-blurhash-render';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  imports: [
+    NgxBlurhashComponent
+  ],
+  styleUrls: ['./app.component.css'],
+  standalone: true
 })
 export class AppComponent {
   title = 'workspace';
