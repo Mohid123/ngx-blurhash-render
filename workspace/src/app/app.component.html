@@ -1,52 +1,148 @@
 <section class="top-section">
-  <div style="display: inline-flex;">
+  <div style="display: inline-flex; align-items: center; gap: 10px;">
     <h2>NGX Blurhash Render</h2>
     <img
-      width="50"
-      height="50"
-      src="https://camo.githubusercontent.com/9eecc42439347332f256a326363924551042f5b96235f972982512199476611a/68747470733a2f2f616e67756c61722e696f2f6173736574732f696d616765732f6c6f676f732f616e67756c61722f616e67756c61722e737667"
-      alt="Angular_logo"
-      style="margin-top: 8px;"
-    >
+      width="40"
+      height="40"
+      src="https://angular.io/assets/images/logos/angular/angular.svg"
+      alt="Angular logo"
+    />
   </div>
-  <h4>A lighweight library for rendering the blurhash of images</h4>
+  <h4>A lightweight Angular library for beautiful image loading</h4>
 </section>
 
-<section class="image-section">
-  <ngx-blurhash-render
-    [blurHash]="'L38gy-00~qIUIUt7M{RjM{j[t7of'"
-    [imageSrc]="'https://api.animetography-blog.com/api/media-upload/mediaFiles/test/31146bc10b344cdb90a13eae66102953f7.jpg'"
-    [borderRadius]="'12px'"
-    [width]="'300px'"
-    [height]="'300px'"
-  >
-  </ngx-blurhash-render>
-  <ngx-blurhash-render
-    [blurHash]="'LEC%8T?dRy8^4-00t7Mx~Ue-.9o$'"
-    [imageSrc]="'https://api.animetography-blog.com/api/media-upload/mediaFiles/test/284b4aec310d9e1036aceff74f9c107d44f.jpeg'"
-    [borderRadius]="'12px'"
-    [width]="'300px'"
-    [height]="'300px'"
-  >
-  </ngx-blurhash-render>
-  <ngx-blurhash-render
-    [blurHash]="'LFN[.}%%9F4:L}8_XTxvxps,E3-o'"
-    [imageSrc]="'https://images.pexels.com/photos/1404819/pexels-photo-1404819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'"
-    [borderRadius]="'12px'"
-    [width]="'300px'"
-    [height]="'300px'"
-  >
-  </ngx-blurhash-render>
-  <ngx-blurhash-render
-    [blurHash]="'LFLXiFlC0z9G02IVVsxu5s-Pvy-o'"
-    [imageSrc]="'https://images.pexels.com/photos/2607544/pexels-photo-2607544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'"
-    [borderRadius]="'12px'"
-    [width]="'300px'"
-    [height]="'300px'"
-  >
-  </ngx-blurhash-render>
+<!-- ── Component: transition type showcase ──────────────────────────── -->
+<section class="demo-section">
+  <h3 class="section-label">Component — transition types</h3>
+
+  <div class="image-grid">
+
+    <div class="card">
+      <p class="card-label">fade (default)</p>
+      <ngx-blurhash-render
+        [blurHash]="'L38gy-00~qIUIUt7M{RjM{j[t7of'"
+        [imageSrc]="'https://images.pexels.com/photos/1404819/pexels-photo-1404819.jpeg?auto=compress&cs=tinysrgb&w=600'"
+        [alt]="'Mountain landscape'"
+        [width]="'280px'"
+        [height]="'280px'"
+        [borderRadius]="'12px'"
+        [transitionType]="'fade'"
+        (loaded)="onLoaded('fade')"
+      />
+    </div>
+
+    <div class="card">
+      <p class="card-label">blur</p>
+      <ngx-blurhash-render
+        [blurHash]="'LEC%8T?dRy8^4-00t7Mx~Ue-.9o$'"
+        [imageSrc]="'https://images.pexels.com/photos/2607544/pexels-photo-2607544.jpeg?auto=compress&cs=tinysrgb&w=600'"
+        [alt]="'Autumn forest'"
+        [width]="'280px'"
+        [height]="'280px'"
+        [borderRadius]="'12px'"
+        [transitionType]="'blur'"
+        [transitionDuration]="'600ms'"
+        (loaded)="onLoaded('blur')"
+      />
+    </div>
+
+    <div class="card">
+      <p class="card-label">scale</p>
+      <ngx-blurhash-render
+        [blurHash]="'LFN[.}%%9F4:L}8_XTxvxps,E3-o'"
+        [imageSrc]="'https://images.pexels.com/photos/1323550/pexels-photo-1323550.jpeg?auto=compress&cs=tinysrgb&w=600'"
+        [alt]="'Mountain lake'"
+        [width]="'280px'"
+        [height]="'280px'"
+        [borderRadius]="'12px'"
+        [transitionType]="'scale'"
+        [transitionDuration]="'500ms'"
+        (loaded)="onLoaded('scale')"
+      />
+    </div>
+
+    <div class="card">
+      <p class="card-label">error + fallback</p>
+      <ngx-blurhash-render
+        [blurHash]="'LFLXiFlC0z9G02IVVsxu5s-Pvy-o'"
+        [imageSrc]="'https://this-url-does-not-exist.example.com/broken.jpg'"
+        [alt]="'Broken image'"
+        [width]="'280px'"
+        [height]="'280px'"
+        [borderRadius]="'12px'"
+        [fallbackSrc]="'https://images.pexels.com/photos/1287145/pexels-photo-1287145.jpeg?auto=compress&cs=tinysrgb&w=600'"
+        (loadError)="onError('fallback', $event)"
+        (loaded)="onLoaded('fallback')"
+      />
+    </div>
+
+  </div>
 </section>
 
-<section class="lower-section">
-  <h4>Install the package <a target="_blank" href="https://www.npmjs.com/package/ngx-blurhash-render">here</a> </h4>
+<!-- ── Directive showcase ────────────────────────────────────────────── -->
+<section class="demo-section">
+  <h3 class="section-label">Directive — applied to existing &lt;img&gt;</h3>
+
+  <div class="image-grid">
+
+    <div class="card">
+      <p class="card-label">fade</p>
+      <div class="directive-host">
+        <img
+          [ngxBlurhash]="'L38gy-00~qIUIUt7M{RjM{j[t7of'"
+          src="https://images.pexels.com/photos/1287145/pexels-photo-1287145.jpeg?auto=compress&cs=tinysrgb&w=600"
+          alt="Mountain stream"
+          (blurhashLoaded)="onLoaded('directive-fade')"
+        />
+      </div>
+    </div>
+
+    <div class="card">
+      <p class="card-label">blur</p>
+      <div class="directive-host">
+        <img
+          [ngxBlurhash]="'LEC%8T?dRy8^4-00t7Mx~Ue-.9o$'"
+          src="https://images.pexels.com/photos/1323550/pexels-photo-1323550.jpeg?auto=compress&cs=tinysrgb&w=600"
+          alt="Lake reflection"
+          ngxBlurhashTransition="blur"
+          ngxBlurhashDuration="600ms"
+          (blurhashLoaded)="onLoaded('directive-blur')"
+        />
+      </div>
+    </div>
+
+    <div class="card">
+      <p class="card-label">scale</p>
+      <div class="directive-host">
+        <img
+          [ngxBlurhash]="'LFN[.}%%9F4:L}8_XTxvxps,E3-o'"
+          src="https://images.pexels.com/photos/2607544/pexels-photo-2607544.jpeg?auto=compress&cs=tinysrgb&w=600"
+          alt="Forest canopy"
+          ngxBlurhashTransition="scale"
+          (blurhashLoaded)="onLoaded('directive-scale')"
+        />
+      </div>
+    </div>
+
+    <div class="card">
+      <p class="card-label">fallback on error</p>
+      <div class="directive-host">
+        <img
+          [ngxBlurhash]="'LFLXiFlC0z9G02IVVsxu5s-Pvy-o'"
+          src="https://this-url-does-not-exist.example.com/broken.jpg"
+          alt="Broken with fallback"
+          ngxBlurhashFallback="https://images.pexels.com/photos/1404819/pexels-photo-1404819.jpeg?auto=compress&cs=tinysrgb&w=600"
+          (blurhashError)="onError('directive-fallback', $event)"
+          (blurhashLoaded)="onLoaded('directive-fallback')"
+        />
+      </div>
+    </div>
+
+  </div>
 </section>
+
+<footer class="footer">
+  <a href="https://www.npmjs.com/package/ngx-blurhash-render" target="_blank">npm</a>
+  &nbsp;·&nbsp;
+  <a href="https://github.com/Mohid123/ng-render-blurhash" target="_blank">GitHub</a>
+</footer>
